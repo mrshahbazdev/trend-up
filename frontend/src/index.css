@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Satoshi";
+    src: url("./Fonts//WEB/fonts/Satoshi-Regular.woff2") format("woff2"),
+        url("./Fonts/WEB/fonts/Satoshi-Regular.ttf") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+.cool-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #16b48e;
+    transition: width 0.3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+}
+
+/* /////////////////button hover effect///////////////////////////// */
+.hvr-bounce-to-right {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 24px;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.hvr-bounce-to-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px;
+    background: #16b48e;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.hvr-bounce-to-right:hover,
+.hvr-bounce-to-right:focus,
+.hvr-bounce-to-right:active {
+    color: #000000;
+}
+.hvr-bounce-to-right:hover:before,
+.hvr-bounce-to-right:focus:before,
+.hvr-bounce-to-right:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+/* ////////////////////////////////////////////////////// */
+.hvr-bounce-to-right-sign {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 24px;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.hvr-bounce-to-right-sign:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px;
+    background: #16b48e;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.hvr-bounce-to-right-sign:hover,
+.hvr-bounce-to-right-sign:focus,
+.hvr-bounce-to-right-sign:active {
+    color: #fff;
+}
+.hvr-bounce-to-right-sign:hover:before,
+.hvr-bounce-to-right-sign:focus:before,
+.hvr-bounce-to-right-sign:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.bounce2 {
+    animation: bounce2 2s ease infinite;
+}
+@keyframes bounce2 {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+.img_moving {
+    animation: mover1 4s infinite;
+}
+@keyframes mover1 {
+    0% {
+        transform: translateY(0);
+        /* transform: translateX(0); */
+    }
+    50% {
+        /* transform: translateX(-100px); */
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0);
+        /* transform: translateX(0); */
+    }
+}
+
+.background-transition {
+    background-color: rgba(15, 19, 20, 0.9);
+    background-image: linear-gradient(#4d515a, #4d515a);
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in-out;
+    border-radius: 13px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.background-transition:hover {
+    background-size: 100% 100%;
+}
+
+/* mix border left half is solid and right half is dashed */
+.mix-border {
+    position: relative;
+}
+
+.mix-border::before,
+.mix-border::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 1.5px;
+}
+
+.mix-border::before {
+    right: 0;
+    background: rgba(186, 222, 228, 0.5); /* Solid border on the left half */
+}
+
+.mix-border::after {
+    left: 0;
+    background: linear-gradient(
+        to left,
+        rgba(186, 222, 228, 0.5) 50%,
+        transparent 0
+    ); /* Dashed border on the right half */
+    background-size: 9px 2px; /* Adjust the width of the dashed part */
+}
+
+/* Change the background color (track) of the progress bar */
+progress#file::-webkit-progress-bar {
+    background-color: #fff; /* Example color for the track */
+    border-radius: 12px;
+    height: 20px;
+}
+
+/* Change the value color of the progress bar */
+progress#file::-webkit-progress-value {
+    background-color: #3b9fb2;
+    border-radius: 10px;
+    height: 20px;
+}
+
+/* For Firefox - change the background color (track) */
+progress#file::-moz-progress-bar {
+    background-color: #3b9fb2; /* Example color for the value/fill */
+    border-radius: 10px;
+    height: 20px;
+}
+
+/* Firefox has a different handling mechanism, so to change the track color you need to adjust the overall background */
+progress#file {
+    background-color: #fff; /* Example color for the track */
+    border-radius: 12px;
+    height: 20px;
+}
+
+.body {
+    overflow-x: hidden !important ;
+}
+
+/* ========================================
+   GLOBAL SCROLL STYLES
+   Beautiful, consistent scrollbars across the app
+   ======================================== */
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #16b48e, #0f9b7a);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #0f9b7a, #16b48e);
+  border: 1px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(135deg, #0d7a63, #16b48e);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Dark theme scrollbar */
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #16b48e, #0f9b7a);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background-clip: content-box;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #0f9b7a, #16b48e);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-clip: content-box;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Light theme scrollbar */
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #16b48e, #0f9b7a);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  background-clip: content-box;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #0f9b7a, #16b48e);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-clip: content-box;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #16b48e transparent;
+}
+
+[data-theme="dark"] * {
+  scrollbar-color: #16b48e rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] * {
+  scrollbar-color: #16b48e rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth scrolling for all elements */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for specific containers */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #16b48e transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #16b48e, #0f9b7a);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-clip: content-box;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #0f9b7a, #16b48e);
+}
+
+/* Thin scrollbar for small containers */
+.thin-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #16b48e transparent;
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 6px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #16b48e, #0f9b7a);
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background-clip: content-box;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #0f9b7a, #16b48e);
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
+/* Animated scrollbar */
+.animated-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #16b48e, #0f9b7a);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  animation: scrollbarPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollbarPulse {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Mobile-friendly scrollbar */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #16b48e, #0f9b7a);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-clip: content-box;
+  }
+}

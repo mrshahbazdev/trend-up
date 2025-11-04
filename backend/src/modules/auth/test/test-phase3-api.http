@@ -1,0 +1,63 @@
+### Phase 3 - Registration Flow API Tests
+### Use REST Client extension in VS Code or import to Postman/Thunder Client
+
+@baseUrl = http://localhost:3001/api/v1/auth
+@email = test@example.com
+@name = John Doe
+@username = johndoe
+@password = Test123!@#
+@code = 123456
+
+### 1. Health Check
+GET http://localhost:3001/health
+
+### 2. Request Email Verification
+POST {{baseUrl}}/request-verification
+Content-Type: application/json
+
+{
+  "email": "{{email}}"
+}
+
+### 3. Verify Email (use code from email or console logs)
+POST {{baseUrl}}/verify-email
+Content-Type: application/json
+
+{
+  "email": "{{email}}",
+  "code": "{{code}}"
+}
+
+### 4. Register User
+POST {{baseUrl}}/register
+Content-Type: application/json
+
+{
+  "email": "{{email}}",
+  "name": "{{name}}",
+  "username": "{{username}}",
+  "password": "{{password}}",
+  "passwordConfirm": "{{password}}"
+}
+
+### 5. Login
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+  "email": "{{email}}",
+  "password": "{{password}}"
+}
+
+### 6. Get Current User (use token from login/register response)
+GET {{baseUrl}}/me
+Authorization: Bearer YOUR_ACCESS_TOKEN_HERE
+
+### 7. Refresh Token
+POST {{baseUrl}}/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "YOUR_REFRESH_TOKEN_HERE"
+}
+
